@@ -1,0 +1,76 @@
+import os
+from collections import Counter
+
+class WordCounter:
+    def __init__(self, filename):
+        self.filename = filename
+        self.content = ""
+        self.word_count = 0
+        self.sentence_count = 0
+        self.char_count = 0
+        self.unique_words = Counter()
+
+    def load_file(self):
+        if not os.path.exists(self.filename):
+            raise FileNotFoundError(f"File '{self.filename}' not found.")
+        with open(self.filename, "r", encoding="utf-8") as f:
+            self.content = f.read()
+
+    def count_characters(self):
+        self.char_count = len(self.content)
+        return self.char_count
+
+    def count_sentences(self):
+        
+        sentences = [s for s in self.content.replace("!", ".").replace("?", ".").split(".") if s.strip()]
+        self.sentence_count = len(sentences)
+        return self.sentence_count
+
+    def count_words(self):
+        words = [w.strip(".,!?;:()[]{}\"'") for w in self.content.split()]
+        words = [w for w in words if w]  
+        self.word_count = len(words)
+        self.unique_words = Counter(words)
+        return self.word_count
+
+    def display_results(self):
+        print("📊 Word Counter Results")
+        print("-" * 30)
+        print(f"Characters: {self.char_count}")
+        print(f"Sentences : {self.sentence_count}")
+        print(f"Words     : {self.word_count}")
+        print(f"Unique    : {len(self.unique_words)}")
+
+        print("\n🔝 Top 10 Most Common Words:")
+        for word, count in self.unique_words.most_common(10):
+            print(f"{word}: {count}")
+
+    def save_results(self, output_file="output.txt"):
+        with open(output_file, "w", encoding="utf-8") as f:
+            f.write("📊 Word Counter Results\n")
+            f.write("-" * 30 + "\n")
+            f.write(f"Characters: {self.char_count}\n")
+            f.write(f"Sentences : {self.sentence_count}\n")
+            f.write(f"Words     : {self.word_count}\n")
+            f.write(f"Unique    : {len(self.unique_words)}\n\n")
+
+            f.write("🔝 Top 10 Most Common Words:\n")
+            for word, count in self.unique_words.most_common(10):
+                f.write(f"{word}: {count}\n")
+
+        print(f"\n✅ Results saved to '{output_file}'")
+
+
+if __name__ == "__main__":
+    filename = input("Enter the filename: ")
+    wc = WordCounter(filename)
+
+    try:
+        wc.load_file()
+        wc.count_characters()
+        wc.count_sentences()
+        wc.count_words()
+        wc.display_results()
+        wc.save_results("results.txt")  
+    except Exception as e:
+        print(f"❌ Error: {e}")
