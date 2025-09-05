@@ -21,14 +21,14 @@ class WordCounter:
         return self.char_count
 
     def count_sentences(self):
-        
+        # Count sentences based on '.', '!', '?'
         sentences = [s for s in self.content.replace("!", ".").replace("?", ".").split(".") if s.strip()]
         self.sentence_count = len(sentences)
         return self.sentence_count
 
     def count_words(self):
         words = [w.strip(".,!?;:()[]{}\"'") for w in self.content.split()]
-        words = [w for w in words if w]  
+        words = [w for w in words if w]  # Remove empty strings
         self.word_count = len(words)
         self.unique_words = Counter(words)
         return self.word_count
@@ -71,6 +71,6 @@ if __name__ == "__main__":
         wc.count_sentences()
         wc.count_words()
         wc.display_results()
-        wc.save_results("results.txt")  
+        wc.save_results("results.txt")  # Save output to file
     except Exception as e:
         print(f"❌ Error: {e}")
