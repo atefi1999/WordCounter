@@ -56,7 +56,7 @@ is: 7
 results.txt → Contains the analysis results
 
 
-📂 Project Structure
+### 📂 Project Structure
 .
 ├── word_counter.py   # Main program
 ├── sample.txt        # Example input text file
