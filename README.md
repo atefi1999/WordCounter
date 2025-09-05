@@ -26,14 +26,14 @@ It also displays the **top 10 most common words** and can save the results to a 
 ### 1. Run the program
 ```bash
 python word_counter.py
+```
 
-
-2. Input
+### 2. Input
 
 Enter the filename: sample.txt
 
 
-3. Example Output
+### 3. Example Output
 
 📊 Word Counter Results
 ------------------------------
@@ -51,7 +51,7 @@ is: 7
 ...
 
 
-4. Output Files
+### 4. Output Files
 
 results.txt → Contains the analysis results
 
