@@ -44,13 +44,14 @@ Unique    : 150
 ```
 
 🔝 Top 10 Most Common Words:
+```backtick
 the: 15
 and: 12
 to: 10
 Python: 8
 is: 7
 ...
-
+```
 
 ### 4. Output Files
 
