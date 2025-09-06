@@ -34,13 +34,14 @@ Enter the filename: sample.txt
 
 
 ### 3. Example Output
-
+```backtick
 📊 Word Counter Results
 ------------------------------
 Characters: 1024
 Sentences : 45
 Words     : 200
 Unique    : 150
+```
 
 🔝 Top 10 Most Common Words:
 the: 15
@@ -57,7 +58,9 @@ results.txt → Contains the analysis results
 
 
 ### 📂 Project Structure
+```markdown
 .
 ├── word_counter.py   # Main program
 ├── sample.txt        # Example input text file
 └── README.md         # Project documentation
+```
