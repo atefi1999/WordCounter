@@ -1,4 +1,4 @@
-# WordCounter
+# Word Counter
 
 A simple Python application to **analyze text files** and count words, characters, sentences, and unique words.  
 It also displays the **top 10 most common words** and can save the results to a file.
@@ -6,6 +6,7 @@ It also displays the **top 10 most common words** and can save the results to a 
 ---
 
 ## ✨ Features
+
 - Count total characters in a text file  
 - Count total sentences (`.`, `!`, `?`)  
 - Count total words  
@@ -16,6 +17,7 @@ It also displays the **top 10 most common words** and can save the results to a 
 ---
 
 ## 🛠 Requirements
+
 - Python 3.x  
 > No external libraries required — only Python standard library.
 
@@ -60,6 +62,7 @@ results.txt → Contains the analysis results
 
 ---
 ## 📂 Project Structure
+
 ```markdown
 .
 ├── word_counter.py   # Main program
