@@ -29,9 +29,9 @@ python word_counter.py
 ```
 
 ### 2. Input
-
+```backtick
 Enter the filename: sample.txt
-
+```
 
 ### 3. Example Output
 ```backtick
@@ -54,10 +54,11 @@ is: 7
 ```
 
 ### 4. Output Files
-
+```backtick
 results.txt → Contains the analysis results
+```
 
-
+---
 ## 📂 Project Structure
 ```markdown
 .
