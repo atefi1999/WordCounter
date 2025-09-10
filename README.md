@@ -58,7 +58,7 @@ is: 7
 results.txt → Contains the analysis results
 
 
-### 📂 Project Structure
+## 📂 Project Structure
 ```markdown
 .
 ├── word_counter.py   # Main program
